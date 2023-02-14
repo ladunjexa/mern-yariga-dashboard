@@ -57,10 +57,10 @@ const PropertyDetails = () => {
     <Box
       borderRadius="15px"
       padding="20px"
-      bgcolor="#fcfcfc"
+      bgcolor="background.paper"
       width="fit-content"
     >
-      <Typography fontSize={25} fontWeight={700} color="#11142D">
+      <Typography fontSize={25} fontWeight={700} color="text.primary">
         Details
       </Typography>
       <Box
@@ -87,7 +87,7 @@ const PropertyDetails = () => {
               <Typography
                 fontSize={18}
                 fontWeight={500}
-                color="#11142D"
+                color="text.primary"
                 textTransform="capitalize"
               >
                 {propertyDetails.propertyType}
@@ -108,7 +108,7 @@ const PropertyDetails = () => {
                 <Typography
                   fontSize={22}
                   fontWeight={600}
-                  color="#11142D"
+                  color="text.primary"
                   textTransform="capitalize"
                 >
                   {propertyDetails.title}
@@ -126,7 +126,7 @@ const PropertyDetails = () => {
                   fontSize={16}
                   fontWeight={600}
                   mt="10px"
-                  color="#11142D"
+                  color="text.primary"
                 >
                   Price
                 </Typography>
@@ -141,7 +141,7 @@ const PropertyDetails = () => {
               </Box>
             </Stack>{" "}
             <Stack mt="25px" direction="column" gap="10px">
-              <Typography fontSize={18} color="#11142D">
+              <Typography fontSize={18} color="text.primary">
                 Description
               </Typography>
               <Typography fontSize={14} color="#808191">
@@ -164,7 +164,8 @@ const PropertyDetails = () => {
             direction="column"
             justifyContent="center"
             alignItems="center"
-            border="1px solid #E4E4E4"
+            // border="1px solid #E4E4E4"
+            bgcolor="background.default"
             borderRadius={2}
           >
             <Stack
@@ -189,7 +190,7 @@ const PropertyDetails = () => {
               />
 
               <Box mt="15px">
-                <Typography fontSize={18} fontWeight={600} color="#11142D">
+                <Typography fontSize={18} fontWeight={600} color="text.primary">
                   {propertyDetails.creator.name}
                 </Typography>
                 <Typography
@@ -209,7 +210,7 @@ const PropertyDetails = () => {
                 </Typography>
               </Stack>
 
-              <Typography mt={1} fontSize={16} fontWeight={600} color="#11142D">
+              <Typography mt={1} fontSize={16} fontWeight={600} color="text.primary">
                 {propertyDetails.creator.allProperties.length} Properties
               </Typography>
             </Stack>
@@ -249,6 +250,7 @@ const PropertyDetails = () => {
           <Stack>
             <img
               src="https://serpmedia.org/scigen/images/googlemaps-nyc-standard.png?crc=3787557525"
+              alt="Google Map"
               width="100%"
               height={306}
               style={{ borderRadius: 10, objectFit: "cover" }}

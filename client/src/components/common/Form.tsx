@@ -25,11 +25,11 @@ const Form = ({
 }: FormProps) => {
   return (
     <Box>
-      <Typography fontSize={25} fontWeight={700} color="#11142d">
+      <Typography fontSize={25} fontWeight={700} color="text.primary">
         {type} a Property
       </Typography>
 
-      <Box mt={2.5} borderRadius="15px" padding="20px" bgcolor="#fcfcfc">
+      <Box mt={2.5} borderRadius="15px" padding="20px" bgcolor="background.paper">
         <form
           style={{
             marginTop: "20px",
@@ -46,7 +46,7 @@ const Form = ({
                 fontWeight: 500,
                 margin: "10px 0",
                 fontSize: 16,
-                color: "#11142d",
+                color: "text.primary",
               }}
             >
               Enter property name
@@ -66,7 +66,7 @@ const Form = ({
                 fontWeight: 500,
                 margin: "10px 0",
                 fontSize: 16,
-                color: "#11142d",
+                color: "text.primary",
               }}
             >
               Enter Description
@@ -76,11 +76,12 @@ const Form = ({
               required
               placeholder="Write description"
               color="info"
+              variant="outlined"
               style={{
                 width: "100%",
                 background: "transparent",
                 fontSize: "16px",
-                borderColor: "rgba(0,0,0,0.23)",
+                // borderColor: "rgba(0,0,0,0.23)",
                 borderRadius: 6,
                 padding: 10,
                 color: "#919191",
@@ -96,7 +97,7 @@ const Form = ({
                   fontWeight: 500,
                   margin: "10px 0",
                   fontSize: 16,
-                  color: "#11142d",
+                  color: "text.primary",
                 }}
               >
                 Select Property Type
@@ -126,7 +127,7 @@ const Form = ({
                   fontWeight: 500,
                   margin: "10px 0",
                   fontSize: 16,
-                  color: "#11142d",
+                  color: "text.primary",
                 }}
               >
                 Enter property price
@@ -149,7 +150,7 @@ const Form = ({
                 fontWeight: 500,
                 margin: "10px 0",
                 fontSize: 16,
-                color: "#11142d",
+                color: "text.primary",
               }}
             >
               Enter Location
@@ -167,7 +168,7 @@ const Form = ({
           <Stack direction="column" gap={1} justifyContent="center" mb={2}>
             <Stack direction="row" gap={2}>
               <Typography
-                color="#11142d"
+                color="text.primary"
                 fontSize={16}
                 fontWeight={500}
                 my="10px"

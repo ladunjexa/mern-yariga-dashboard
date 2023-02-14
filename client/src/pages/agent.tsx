@@ -14,7 +14,7 @@ const Agents = () => {
   if (isError) return <Typography>Error</Typography>;
   return (
     <Box>
-      <Typography fontSize={25} fontWeight={700} color="#11142D">
+      <Typography fontSize={25} fontWeight={700} color="text.primary">
         Agents List
       </Typography>
       <Box
@@ -23,7 +23,7 @@ const Agents = () => {
           display: "flex",
           flexWrap: "wrap",
           gap: "20px",
-          backgroundColor: "#fcfcfc",
+          backgroundColor: "background.default",
         }}
       >
         {allAgents.map((agent) => (

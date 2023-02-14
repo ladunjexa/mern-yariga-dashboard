@@ -11,6 +11,7 @@ import {
 } from "components";
 
 const Home = () => {
+  
   const { data, isLoading, isError } = useList({
     resource: "properties",
     config: {
@@ -19,7 +20,7 @@ const Home = () => {
       },
     },
   });
-
+  
   const latestProperties = data?.data ?? [];
 
   if (isLoading) return <Typography>Loading...</Typography>;
@@ -27,33 +28,33 @@ const Home = () => {
 
   return (
     <Box>
-      <Typography fontSize={25} fontWeight={700} color="#11142D">
+      <Typography fontSize={25} fontWeight={700} color="text.primary">
         Dashboard
       </Typography>
       <Box mt="20px" display="flex" flexWrap="wrap" gap={4}>
         <PieChart
           title="Properties for Sale"
-          value={684}
+          value={data.total}
           series={[75, 25]}
-          colors={["#275BE8", "#C4E8EF"]}
+          colors={["#275BE8", "#F4F4F4"]}
         />
         <PieChart
           title="Properties for Rent"
           value={550}
           series={[60, 40]}
-          colors={["#275BE8", "#C4E8EF"]}
+          colors={["#FD8539", "#F4F4F4"]}
         />
         <PieChart
           title="Total Customers"
           value={5684}
-          series={[75, 25]}
-          colors={["#275BE8", "#C4E8EF"]}
+          series={[85, 15]}
+          colors={["#2ED480", "#F4F4F4"]}
         />
         <PieChart
-          title="Properties for Cities"
-          value={555}
-          series={[75, 25]}
-          colors={["#275BE8", "#C4E8EF"]}
+          title="Total Agents"
+          value={684}
+          series={[63, 37]}
+          colors={["#FE6D8E", "#F4F4F4"]}
         />
       </Box>
       <Stack
@@ -70,13 +71,13 @@ const Home = () => {
         flex={1}
         borderRadius="15px"
         padding="20px"
-        bgcolor="#fcfcfc"
+        bgcolor="background.paper"
         display="flex"
         flexDirection="column"
         minWidth="100%"
         mt="25px"
       >
-        <Typography fontSize={18} fontWeight={600} color="#11142D">
+        <Typography fontSize={18} fontWeight={600} color="text.primary">
           Latest Properties
         </Typography>
         <Box mt={2.5} sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>

@@ -54,11 +54,20 @@ const AllProperties = () => {
 
   return (
     <Box>
-      <Box mt="20px" sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
+      <Stack direction="row" justifyContent="space-between">
+        <Typography fontSize={25} fontWeight={700} color="text.primary">
+          {!allProperties.length ? "No Properties" : "All Properties"}
+        </Typography>
+        <CustomButton
+          title="Add Property"
+          handleClick={() => navigate("/properties/create")}
+          backgroundColor="#475BE8"
+          color="#FCFCFC"
+          icon={<Add />}
+        />
+      </Stack>
+      <Box sx={{ display: "flex", flexWrap: "wrap" }}>
         <Stack direction="column" width="100%">
-          <Typography fontSize={25} fontWeight={700} color="#11142D">
-            {!allProperties.length ? "No Properties" : "All Properties"}
-          </Typography>
           <Box
             mb={2}
             mt={3}
@@ -137,16 +146,11 @@ const AllProperties = () => {
           </Box>
         </Stack>
       </Box>
-      <Stack direction="row" justifyContent="space-between" alignItems="center">
-        <CustomButton
-          title="Add Property"
-          handleClick={() => navigate("/properties/create")}
-          backgroundColor="#475BE8"
-          color="#fcfcfc"
-          icon={<Add />}
-        />
-      </Stack>
-      <Box mt="20px" sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
+      <Box
+        mt="20px"
+        sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}
+        justifyContent={{ md: "flex-start", xs: "center" }}
+      >
         {allProperties.map((property) => (
           <PropertyCard
             key={property._id}
@@ -196,7 +200,7 @@ const AllProperties = () => {
               setPageSize(e.target.value ? Number(e.target.value) : 10)
             }
           >
-            {[10, 20, 30, 40, 50].map((size) => (
+            {[5, 10, 20, 30, 40, 50].map((size) => (
               <MenuItem key={size} value={size}>
                 Show {size}
               </MenuItem>

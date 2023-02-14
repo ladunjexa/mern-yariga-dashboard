@@ -41,6 +41,8 @@ const AgentCard = ({
         "&:hover": {
           boxShadow: "0 22px 45px 2px rgba(176,176,176,0.1)",
         },
+        backgroundColor: "background.paper",
+        borderRadius: "15px",
       }}
     >
       <img
@@ -56,8 +58,8 @@ const AgentCard = ({
         flex={1}
         gap={{ xs: 4, sm: 2 }}
       >
-        <Stack gap={2} direction="row" flexWrap="wrap" alignItems="center">
-          <Typography fontSize={22} fontWeight={600} color="#11142D">
+        <Stack gap={1} direction="column" flexWrap="wrap" alignItems="start">
+          <Typography fontSize={22} fontWeight={600} color="text.primary">
             {name}
           </Typography>
           <Typography fontSize={14} color="#808191">
@@ -76,6 +78,14 @@ const AgentCard = ({
             name={email}
           />
           <InfoBar icon={<Place sx={{ color: "#808191" }} />} name="London" />
+        </Stack>
+        <Stack
+          direction="row"
+          flexWrap="wrap"
+          justifyContent="space-between"
+          alignItems="center"
+          gap={2}
+        >
           <InfoBar
             icon={<Phone sx={{ color: "#808191" }} />}
             name="+502-3231-4141"
