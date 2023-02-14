@@ -7,6 +7,7 @@
 <!--   <h1>Yariga</h1> -->
 <br/>
   <img src="readme_assets/yariga_logo.svg" />
+<br/>
   
   <p>
     <b>Yariga</b> is a Full Stack MERN Dashboard App With CRUD, Auth, and Charts Using Refine
