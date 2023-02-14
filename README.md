@@ -5,6 +5,7 @@
   ![Project Banner](readme_assets/readme_banner-light.png#gh-light-mode-only)
 
 <!--   <h1>Yariga</h1> -->
+<br/>
   <img src="readme_assets/yariga_logo.svg" />
   
   <p>
