@@ -37,7 +37,7 @@
 </p>
 
 <h4>
-<a href="https://Yariga-Realestate-Dashboard.vercel.app/">View Demo</a>
+<a href="https://mern-dashboard-app.vercel.app">View Demo</a>
 <span> · </span>
 <a href="https://github.com/ladunjexa/Yariga-Realestate-Dashboard">Documentation</a>
 <span> · </span>
