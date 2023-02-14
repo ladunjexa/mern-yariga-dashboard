@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
   const shouldRenderHeader = true; // since we are using the dark/light toggle; we don't need to check if user is logged in or not.
   // sx={{ background: "#fcfcfc" }}
   return shouldRenderHeader ? (
-    <AppBar color="default" position="sticky" elevation={0} sx={{ background: "secondary.main" }}>
+    <AppBar color="default" position="sticky" elevation={0} sx={{ background: "background.paper" }}>
       <Toolbar>
         <Stack
           direction="row"
