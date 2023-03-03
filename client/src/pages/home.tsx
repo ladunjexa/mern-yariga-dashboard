@@ -30,7 +30,7 @@ const Home = () => {
       <Typography fontSize={25} fontWeight={700} color="text.primary">
         Dashboard
       </Typography>
-      <Box mt="20px" display="flex" flexWrap="wrap" gap={4}>
+      <Box mt="20px" display="flex" flexWrap="wrap" gap={4}> 
         <PieChart
           title="Properties for Sale"
           value={data.total}
@@ -65,13 +65,13 @@ const Home = () => {
         <TotalRevenue />
         <PropertyReferrals />
       </Stack>
-
       <Box
         flex={1}
         borderRadius="15px"
         padding="20px"
         bgcolor="background.paper"
         display="flex"
+        flexWrap="wrap"
         flexDirection="column"
         minWidth="100%"
         mt="25px"
@@ -81,7 +81,7 @@ const Home = () => {
         </Typography>
         <Box
           mt={2.5}
-          sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}
+          sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}
           justifyContent={{ md: "flex-start", xs: "center" }}
         >
           {latestProperties.map((property) => (

@@ -59,17 +59,20 @@ function App() {
 
       // Save user to MongoDB
       if (profileObj) {
-        const response = await fetch("https://yagira-server-ze40.onrender.com/api/v1/users", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name: profileObj.name,
-            email: profileObj.email,
-            avatar: profileObj.picture,
-          }),
-        });
+        const response = await fetch(
+          `${process.env.REACT_APP_SERVER_URL}/users`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name: profileObj.name,
+              email: profileObj.email,
+              avatar: profileObj.picture,
+            }),
+          }
+        );
 
         const data = await response.json();
 
@@ -130,7 +133,9 @@ function App() {
       <GlobalStyles styles={{ html: { WebkitFontSmoothing: "auto" } }} />
       <RefineSnackbarProvider>
         <Refine
-          dataProvider={dataProvider("https://yagira-server-ze40.onrender.com/api/v1")}
+          dataProvider={dataProvider(
+            process.env.REACT_APP_SERVER_URL as string
+          )}
           notificationProvider={notificationProvider}
           ReadyPage={ReadyPage}
           catchAll={<ErrorComponent />}
