@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@mui/icons-material": "^5.15.10",
+    "@mui/icons-material": "^5.15.11",
     "@pankod/refine-cli": "^1.2.0",
     "@pankod/refine-core": "^3.103.0",
     "@pankod/refine-inferencer": "^2.0.2",
